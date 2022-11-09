@@ -21,6 +21,7 @@ const GetData = () => {
 
     return(
         <div>
+            <h1>Listeria-bot</h1>
             <pre>
                 {JSON.stringify(query, null, "   " ) 
                            }
