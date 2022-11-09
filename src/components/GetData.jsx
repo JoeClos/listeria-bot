@@ -17,11 +17,11 @@ const GetData = () => {
         .catch((error) => {
             console.log(error)
         })
-    }, [])
+    }, [sparql])
 
     return(
         <div>
-            <h1>Listeria-bot</h1>
+            <h1>Listeria</h1>
             <pre>
                 {JSON.stringify(query, null, "   " ) 
                            }
