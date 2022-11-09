@@ -17,7 +17,7 @@ const GetData = () => {
         .catch((error) => {
             console.log(error)
         })
-    }, [])
+    }, [sparql])
 
     return(
         <div>
