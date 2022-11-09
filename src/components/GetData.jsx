@@ -21,6 +21,7 @@ const GetData = () => {
 
     return(
         <div>
+            <h1>Listeria</h1>
             <pre>
                 {JSON.stringify(query, null, "   " ) 
                            }
