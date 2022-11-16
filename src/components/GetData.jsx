@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import convert from "../convert";
 
 const GetData = () => {
   const url = "https://query.wikidata.org/sparql?format=json&query=";
@@ -34,11 +35,16 @@ const GetData = () => {
             </a>
      
 
-
+    <h2>Data from the Wikidata</h2>
       <pre>
         {JSON.stringify(query, null, "   ")}
       
       </pre>
+    <h2>Data for the Wikimedia Commons</h2>
+    <pre>
+    {JSON.stringify(convert(query), null, "   ")}
+
+    </pre>
      
     </div>
   );
