@@ -6,13 +6,14 @@ const GetData = () => {
   const url = "https://query.wikidata.org/sparql?format=json&query=";
   const sparql = document.location.search.slice(1);
   const queryWikidata = "https://query.wikidata.org/";
+  const sourceUrl = url + sparql;
+  const sourceLink = queryWikidata + "#" + sparql;
 
-
-  const [query, setQuery] = useState({ data: [] });
+  const [query, setQuery] = useState();
 
   useEffect(() => {
     axios
-      .get(url + sparql)
+      .get(sourceUrl)
       .then((response) => {
         setQuery(response.data);
         console.log(response.data);
@@ -20,14 +21,14 @@ const GetData = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [sparql]);
+  }, [sourceUrl]);
 
   return (
     <div>
       <h1>Listeria</h1>
 
             <a
-              href= {queryWikidata + "#" + sparql}
+              href= {sourceLink}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -42,7 +43,7 @@ const GetData = () => {
       </pre>
     <h2>Data for the Wikimedia Commons</h2>
     <pre>
-    {JSON.stringify(convert(query), null, "   ")}
+    {query && JSON.stringify(convert(query, sourceLink), null, "   ")}
 
     </pre>
      
