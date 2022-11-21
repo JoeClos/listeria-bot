@@ -12,7 +12,7 @@
 .btn{
     padding: 12px;
     border-radius: 5px;
-    border: 1px #0069D9 solid;
+    border: 1px #3272b6 solid;
     background-color: white;
     color: #0069D9;
     margin-right: 1rem;
@@ -21,7 +21,7 @@
 .btn-save-commons{
     padding: 9px;
     border-radius: 5px;
-    border: 1px #0069D9 solid;
+    border: 1px #3272b6 solid;
     background-color: white;
     color: #0069D9;
     margin-right: 1rem;
@@ -29,12 +29,12 @@
 }
 
 .btn-save-commons:hover{
-    background-color: #E5E5E5;
-    color: black;
+    background-color: #CCE5FF;
+    color: #004085;
 }
 .btn:hover{
-    background-color: #0069D9;
-    color: white;
+    background-color: #CCE5FF;
+    color: #004085;
 }
 
 .wikidata-logo{

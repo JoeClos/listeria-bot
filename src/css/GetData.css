@@ -2,11 +2,14 @@
   display: flex;
   /* flex-wrap: wrap; */
   margin: 1rem;
-  padding: px;
 }
 
 .data{
     margin-right: 2rem;
     border: 1px solid darkgrey;
+    padding: 1.5rem;
+    border-radius: 5px;
 }
+
+
 
