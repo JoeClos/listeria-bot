@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GetData from "./components/GetData";
 import "./App.css";
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   if (loading) {
     return (
