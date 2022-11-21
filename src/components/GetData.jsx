@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import convert from "../convert";
 import Navbar from "./Navbar";
+import '../css/GetData.css'
 
 const GetData = () => {
   const url = "https://query.wikidata.org/sparql?format=json&query=";
@@ -25,24 +26,22 @@ const GetData = () => {
   }, [sourceUrl]);
 
   return (
-    <div>
+    <section>
       <Navbar />
 
-            
-     
-
-    <h2>Data from the Wikidata</h2>
-      <pre>
-        {JSON.stringify(query, null, "   ")}
-      
-      </pre>
-    <h2>Data for the Wikimedia Commons</h2>
-    <pre>
-    {query && JSON.stringify(convert(query, sourceLink), null, "   ")}
-
-    </pre>
-     
-    </div>
+      <div className="container">
+        <div className="data">
+          <h2>Data from the Wikidata</h2>
+          <pre>{JSON.stringify(query, null, "   ")}</pre>
+        </div>
+        <div className="data">
+          <h2>Data for the Wikimedia Commons</h2>
+          <pre>
+            {query && JSON.stringify(convert(query, sourceLink), null, "   ")}
+          </pre>
+        </div>
+      </div>
+    </section>
   );
 };
 
