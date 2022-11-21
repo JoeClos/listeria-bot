@@ -6,7 +6,7 @@ const Navbar = () => {
     const sourceLink = queryWikidata + "#" + sparql;
     return (
         <nav className="navbar">
-            <h1>Tabular data from SPARQL</h1>
+            <h1>Tabular Data from SPARQL</h1>
 
             <div className='buttons-container'>
                 {/*This is the button that's open new page too see the query in wikidata  */}
