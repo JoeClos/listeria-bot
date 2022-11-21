@@ -27,16 +27,26 @@ const GetData = () => {
     <div>
       <h1>Listeria</h1>
 
-      <a href={sourceLink} target="_blank" rel="noopener noreferrer">
-        Link
-      </a>
+            <a
+              href= {sourceLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Link
+            </a>
+     
 
-      <h2>Data from the Wikidata</h2>
-      <pre>{JSON.stringify(query, null, "   ")}</pre>
-      <h2>Data for the Wikimedia Commons</h2>
+    <h2>Data from the Wikidata</h2>
       <pre>
-        {query && JSON.stringify(convert(query, sourceLink), null, "   ")}
+        {JSON.stringify(query, null, "   ")}
+      
       </pre>
+    <h2>Data for the Wikimedia Commons</h2>
+    <pre>
+    {query && JSON.stringify(convert(query, sourceLink), null, "   ")}
+
+    </pre>
+     
     </div>
   );
 };
