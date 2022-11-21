@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import convert from "../convert";
+import Navbar from "./Navbar";
 
 const GetData = () => {
   const url = "https://query.wikidata.org/sparql?format=json&query=";
@@ -25,15 +26,9 @@ const GetData = () => {
 
   return (
     <div>
-      <h1>Listeria</h1>
+      <Navbar />
 
-            <a
-              href= {sourceLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Link
-            </a>
+            
      
 
     <h2>Data from the Wikidata</h2>
