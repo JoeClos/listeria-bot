@@ -1,6 +1,7 @@
 .container {
   display: flex;
   /* flex-wrap: wrap; */
+  flex-direction: row;
   margin: 1rem;
 }
 
@@ -9,6 +10,12 @@
     border: 1px solid darkgrey;
     padding: 1.5rem;
     border-radius: 5px;
+    width: 50%;
+}
+
+.wrap-data{
+  word-break: break-all;
+  white-space: pre-wrap;
 }
 
 

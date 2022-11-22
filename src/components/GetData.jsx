@@ -36,7 +36,7 @@ const GetData = () => {
         </div>
         <div className="data">
           <h2>Data for the Wikimedia Commons</h2>
-          <pre>
+          <pre className="wrap-data">
             {query && JSON.stringify(convert(query, sourceLink), null, "   ")}
           </pre>
         </div>
