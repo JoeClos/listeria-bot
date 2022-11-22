@@ -4,19 +4,16 @@ import "./App.css";
 function App() {
   const [loading, setLoading] = useState(false);
 
-  if (loading) {
-    return (
-      <>
+  return (
+    <div className="App">
+      {loading ? (
         <div className="position">
           <div className="loader"></div>
           <h3>Loading ...</h3>
         </div>
-      </>
-    );
-  }
-  return (
-    <div className="App">
-      <GetData />
+      ) : (
+        <GetData />
+      )}
     </div>
   );
 }
