@@ -25,11 +25,11 @@ const Navbar = () => {
                       </button>
                 </a>
                 {/*This is the button that's saving the data to Wikimedia Commons  */}
-                <a
+                {/* <a
                   href= "#"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
+                > */}
                     
                   <button className='btn-save-commons'>
                   <img src='images/Commons-logo.png' 
@@ -38,7 +38,7 @@ const Navbar = () => {
                       />
                       <div>Save to Wikimedia Commons</div>
                     </button>
-                </a>
+                {/* </a> */}
             </div>
         </nav>
     )
