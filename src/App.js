@@ -1,19 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import GetData from "./components/GetData";
 import "./App.css";
 function App() {
-  const [loading] = useState(false);
-
   return (
     <div className="App">
-      {loading ? (
-        <div className="position">
-          <div className="loader"></div>
-          <h3>Loading ...</h3>
-        </div>
-      ) : (
-        <GetData />
-      )}
+      <GetData />
     </div>
   );
 }

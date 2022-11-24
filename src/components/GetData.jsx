@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import convert from "../convert";
 import Navbar from "./Navbar";
-import '../css/GetData.css'
+import "../css/GetData.css";
 
 const GetData = () => {
   const url = "https://query.wikidata.org/sparql?format=json&query=";
@@ -12,18 +12,32 @@ const GetData = () => {
   const sourceLink = queryWikidata + "#" + sparql;
 
   const [query, setQuery] = useState();
+  const [loading, setLoading] = useState(true);
+  useEffect(
+    () => {
+      axios
+        .get(sourceUrl)
+        .then((response) => {
+          setQuery(response.data);
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => setLoading(false));
+    },
+    [sourceUrl],
+    4000
+  );
 
-  useEffect(() => {
-    axios
-      .get(sourceUrl)
-      .then((response) => {
-        setQuery(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [sourceUrl]);
+  if (loading) {
+    return (
+      <div className="position">
+        <div className="loader"></div>
+        <h3>Loading ...</h3>
+      </div>
+    );
+  }
 
   return (
     <section>
