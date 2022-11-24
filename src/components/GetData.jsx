@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import convert from "../convert";
 import Navbar from "./Navbar";
@@ -13,22 +12,13 @@ const GetData = () => {
 
   const [query, setQuery] = useState();
   const [loading, setLoading] = useState(true);
-  useEffect(
-    () => {
-      axios
-        .get(sourceUrl)
-        .then((response) => {
-          setQuery(response.data);
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-        .finally(() => setLoading(false));
-    },
-    [sourceUrl],
-    4000
-  );
+  useEffect(() => {
+    fetch(sourceUrl)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+    setQuery();
+    setLoading(false);
+  }, [sourceUrl]);
 
   if (loading) {
     return (
