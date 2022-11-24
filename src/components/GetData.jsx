@@ -46,7 +46,7 @@ const GetData = () => {
       <div className="container">
         <div className="data">
           <h2>Data from the Wikidata</h2>
-          <pre>{JSON.stringify(query, null, "   ")}</pre>
+          <pre className="wrap-data">{JSON.stringify(query, null, "   ")}</pre>
         </div>
         <div className="data">
           <h2>Data for the Wikimedia Commons</h2>
