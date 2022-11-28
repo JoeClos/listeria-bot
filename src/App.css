@@ -79,6 +79,35 @@ body {
     flex-wrap: nowrap;
   }
   .navbar h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .buttons-container {
+    padding: 0.6rem;
+  }
+
+  .btn-query {
+    padding: 10px 7px;
+  }
+  .btn-save-commons {
+    padding: 0;
+  }
+  .github-button {
+    padding: 10px;
+  }
+  .buttons-container .text-btn {
+    font-size: 10px;
+  }
+  .data {
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  pre {
+    font-size: 0.7rem;
   }
 }

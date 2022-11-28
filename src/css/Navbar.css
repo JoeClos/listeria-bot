@@ -11,10 +11,9 @@ h1 {
   padding: 1.5rem;
   display: flex;
   flex-direction: row;
-  
 }
 
-.btn {
+.btn-query {
   padding: 12px;
   border-radius: 5px;
   border: 1px #3272b6 solid;
@@ -37,7 +36,7 @@ h1 {
   background-color: #cce5ff;
   color: #004085;
 }
-.btn:hover {
+.btn-query:hover {
   background-color: #cce5ff;
   color: #004085;
 }
@@ -49,7 +48,7 @@ h1 {
   width: 20px;
   margin: 0 0 0 5px;
 }
-.github-button {
+.btn-github {
   font-size: 20px;
   padding: 14px;
   border-radius: 5px;
@@ -59,7 +58,7 @@ h1 {
   margin-right: 1rem;
   cursor: pointer;
 }
-.github-button:hover {
+.btn-github:hover {
   background-color: #cce5ff;
   color: #004085;
 }
