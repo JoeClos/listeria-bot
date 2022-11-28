@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../css/Navbar.css";
 
 const Navbar = () => {
@@ -7,30 +9,45 @@ const Navbar = () => {
   const sourceLink = queryWikidata + "#" + sparql;
   return (
     <nav className="navbar">
-      <h1>Tabular Data from SPARQL</h1>
+      <div className="upper-layer">
+        <h1>Tabular Data from SPARQL</h1>
 
-      <div className="buttons-container">
-        {/*This is the button that's open new page too see the query in wikidata  */}
-        <a href={sourceLink} target="_blank" rel="noopener noreferrer">
-          <button className="btn">
+        <div className="buttons-container">
+          {/*This is the button that's open new page too see the query in wikidata  */}
+
+          <a href={sourceLink} target="_blank" rel="noopener noreferrer">
+            <button className="btn-query">
+              <img
+                src="images/Wikidata-logo-en.png"
+                alt="Wikidata logo"
+                className="wikidata-logo"
+              />
+              <div className="text-btn">View query</div>
+            </button>
+          </a>
+
+          {/*This is the button that's saving the data to Wikimedia Commons  */}
+
+          <button className="btn-save-commons">
             <img
-              src="images/Wikidata-logo-en.png"
-              alt="Wikidata logo"
-              className="wikidata-logo"
+              src="images/Commons-logo.png"
+              alt="Wikimedia Commons logo"
+              className="commons-logo"
             />
-            <div>View query</div>
+            <div className="text-btn">Save to Wikimedia Commons</div>
           </button>
-        </a>
-        {/*This is the button that's saving the data to Wikimedia Commons  */}
 
-        <button className="btn-save-commons">
-          <img
-            src="images/Commons-logo.png"
-            alt="Wikimedia Commons logo"
-            className="commons-logo"
-          />
-          <div>Save to Wikimedia Commons</div>
-        </button>
+          <a href="https://github.com/JoeClos/listeria-bot">
+            <button className="btn-github">
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="github-icon"
+                style={{ fontSize: "28px" }}
+              />
+              <div className="text-btn">GitHub</div>
+            </button>
+          </a>
+        </div>
       </div>
     </nav>
   );

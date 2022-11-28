@@ -42,7 +42,6 @@ const GetData = () => {
   return (
     <section>
       <Navbar />
-
       <div className="container">
         <div className="data">
           <h2>Data from the Wikidata</h2>

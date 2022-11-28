@@ -1,3 +1,16 @@
+/* global style for page */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .position {
   display: flex;
   flex-direction: column;
@@ -21,3 +34,126 @@
     transform: rotate(360deg);
   }
 }
+
+/* For mobile phones: */
+@media all and (max-width: 426px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .buttons-container {
+    padding: 1rem;
+  }
+
+  .buttons-container .text-btn {
+    font-size: 0.5rem;
+  }
+  .data {
+    width: fit-content;
+    margin-left: 2rem;
+    padding: 0;
+    margin: 5px;
+  }
+  .data h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  pre {
+    padding: 10px;
+    font-size: 0.6rem;
+  }
+  .wrap-data {
+    padding: 10px;
+  }
+
+  .github-icon{
+    font-size:20px;
+  }
+}
+
+/* For tablet: */
+@media (min-width: 427px) and (max-width: 768px) {
+  section {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .navbar {
+    flex-wrap: nowrap;
+  }
+  .navbar h1 {
+    font-size: 1.3rem;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .buttons-container {
+    padding: 0.6rem;
+  }
+
+  /* .btn-query {
+    padding: 10px 7px;
+  } */
+  .btn-save-commons {
+    padding: 0;
+  }
+  .github-button {
+    padding: 10px;
+  }
+  .buttons-container .text-btn {
+    font-size: 10px;
+  }
+  .data {
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  pre {
+    font-size: 0.7rem;
+  }
+
+  .github-icon{
+    font-size:20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .buttons-container{
+    align-items: center;
+  }
+
+  .btn-query{
+    padding: 3px;
+
+  }
+
+  .btn-github{
+    padding: 8px;
+  }
+
+  .github-icon{
+    font-size:20px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1529px) {
+  .buttons-container{
+    align-items: center;
+  }
+  .btn-save-commons{
+    padding: 8px;
+  }
+
+  .btn-github .github-icon{
+    font-size: 40px;
+  }
+  
+  .btn-query{
+    padding: 15px;
+  }
+}
+
+
