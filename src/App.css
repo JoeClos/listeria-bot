@@ -41,7 +41,7 @@ body {
     flex-wrap: wrap;
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .buttons-container {
     padding: 1rem;
@@ -70,7 +70,7 @@ body {
 }
 
 /* For tablet: */
-@media all and (max-width: 768px) {
+@media (min-width: 427px) and (max-width: 768px) {
   section {
     width: 90%;
     margin: 0 auto;
@@ -111,6 +111,3 @@ body {
     font-size: 0.7rem;
   }
 }
-
-
-
