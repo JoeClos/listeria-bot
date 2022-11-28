@@ -139,3 +139,21 @@ body {
   }
 }
 
+@media (min-width: 1441px) and (max-width: 1529px) {
+  .buttons-container{
+    align-items: center;
+  }
+  .btn-save-commons{
+    padding: 8px;
+  }
+
+  .btn-github .github-icon{
+    font-size: 40px;
+  }
+  
+  .btn-query{
+    padding: 15px;
+  }
+}
+
+

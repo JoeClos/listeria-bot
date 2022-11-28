@@ -40,7 +40,7 @@ const Navbar = () => {
 
         <a href="https://github.com/JoeClos/listeria-bot">
           <button className="btn-github">
-            <FontAwesomeIcon icon={faGithub} className="github-icon" />
+            <FontAwesomeIcon icon={faGithub} className="github-icon" style={{fontSize: "28px"}} />
             <div className="text-btn">GitHub</div>
           </button>
         </a>
