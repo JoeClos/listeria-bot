@@ -67,6 +67,10 @@ body {
   .wrap-data {
     padding: 10px;
   }
+
+  .github-icon{
+    font-size:20px;
+  }
 }
 
 /* For tablet: */
@@ -89,9 +93,9 @@ body {
     padding: 0.6rem;
   }
 
-  .btn-query {
+  /* .btn-query {
     padding: 10px 7px;
-  }
+  } */
   .btn-save-commons {
     padding: 0;
   }
@@ -110,4 +114,28 @@ body {
   pre {
     font-size: 0.7rem;
   }
+
+  .github-icon{
+    font-size:20px;
+  }
 }
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .buttons-container{
+    align-items: center;
+  }
+
+  .btn-query{
+    padding: 3px;
+
+  }
+
+  .btn-github{
+    padding: 8px;
+  }
+
+  .github-icon{
+    font-size:20px;
+  }
+}
+

@@ -29,7 +29,6 @@ const Navbar = () => {
 
         <button
           className="btn-save-commons"
-          style={{ width: "100px", padding: "none" }}
         >
           <img
             src="images/Commons-logo.png"
@@ -41,7 +40,7 @@ const Navbar = () => {
 
         <a href="https://github.com/JoeClos/listeria-bot">
           <button className="btn-github">
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} className="github-icon" />
             <div className="text-btn">GitHub</div>
           </button>
         </a>
