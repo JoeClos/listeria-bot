@@ -59,8 +59,10 @@ body {
     margin: 5px;
   }
   .data h2 {
+    
     font-size: 1rem;
     text-align: center;
+    
   }
   pre {
     padding: 10px;
@@ -70,8 +72,8 @@ body {
     padding: 10px;
   }
 
-  .github-icon{
-    font-size:20px;
+  .github-icon {
+    font-size: 20px;
   }
 }
 
@@ -117,45 +119,42 @@ body {
     font-size: 0.7rem;
   }
 
-  .github-icon{
-    font-size:20px;
+  .github-icon {
+    font-size: 20px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
-  .buttons-container{
+  .buttons-container {
     align-items: center;
   }
 
-  .btn-query{
+  .btn-query {
     padding: 3px;
-
   }
 
-  .btn-github{
+  .btn-github {
     padding: 8px;
   }
 
-  .github-icon{
-    font-size:20px;
+  .github-icon {
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1441px) and (max-width: 1529px) {
-  .buttons-container{
+  .buttons-container {
     align-items: center;
   }
-  .btn-save-commons{
+  .btn-save-commons {
     padding: 8px;
   }
 
-  .btn-github .github-icon{
+  .btn-github .github-icon {
     font-size: 40px;
   }
-  
-  .btn-query{
+
+  .btn-query {
     padding: 15px;
   }
 }
-
-
