@@ -5,18 +5,16 @@
   margin: 1rem;
 }
 
-.data{
-    margin-right: 2rem;
-    border: 1px solid darkgrey;
-    padding: 1.5rem;
-    border-radius: 5px;
-    width: 50%;
+.data {
+  margin-right: 2rem;
+  border: 1px solid darkgrey;
+  padding: 1.5rem;
+  border-radius: 5px;
+  width: 50%;
 }
 
-.wrap-data{
+.wrap-data {
+  
   word-break: break-all;
   white-space: pre-wrap;
 }
-
-
-

@@ -1,3 +1,9 @@
+/* global style for page */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .position {
   display: flex;
   flex-direction: column;
@@ -19,5 +25,39 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* For mobile phones: */
+@media all and (max-width: 425px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .buttons-container {
+    padding: 1rem;
+  }
+
+  .buttons-container .text-btn {
+    font-size: 0.5rem;
+  }
+  .data {
+    width: fit-content;
+    margin-left: 2rem;
+    padding: 0;
+    margin: 5px;
+  }
+  .data h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  pre {
+    padding: 10px;
+    font-size: 0.6rem;
+  }
+  .wrap-data {
+    padding: 10px;
   }
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../css/Navbar.css";
 
 const Navbar = () => {
@@ -18,7 +20,7 @@ const Navbar = () => {
               alt="Wikidata logo"
               className="wikidata-logo"
             />
-            <div>View query</div>
+            <div className="text-btn">View query</div>
           </button>
         </a>
         {/*This is the button that's saving the data to Wikimedia Commons  */}
@@ -29,8 +31,14 @@ const Navbar = () => {
             alt="Wikimedia Commons logo"
             className="commons-logo"
           />
-          <div>Save to Wikimedia Commons</div>
+          <div className="text-btn">Save to Wikimedia Commons</div>
         </button>
+        <a href="https://github.com/JoeClos/listeria-bot">
+          <button className="github-button">
+            <FontAwesomeIcon icon={faGithub} />
+            <div className="text-btn">GitHub</div>
+          </button>
+        </a>
       </div>
     </nav>
   );
