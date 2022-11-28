@@ -41,7 +41,7 @@ export default function convert(input, sparql) {
   if (input.results.bindings[0].item.type === "uri"){
     result.schema.fields[0].type = "uri"
   }
-  if(input.results.bindings[0].population.type === linkResult){
+  if(input.results.bindings[0].population.datatype === linkResult){
     result.schema.fields[3].type = "number";
   }
   if(input.results.bindings[0].year.datatype === linkResult2){
