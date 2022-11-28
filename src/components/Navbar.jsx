@@ -13,8 +13,9 @@ const Navbar = () => {
 
       <div className="buttons-container">
         {/*This is the button that's open new page too see the query in wikidata  */}
+
         <a href={sourceLink} target="_blank" rel="noopener noreferrer">
-          <button className="btn">
+          <button className="btn-query">
             <img
               src="images/Wikidata-logo-en.png"
               alt="Wikidata logo"
@@ -23,9 +24,13 @@ const Navbar = () => {
             <div className="text-btn">View query</div>
           </button>
         </a>
+
         {/*This is the button that's saving the data to Wikimedia Commons  */}
 
-        <button className="btn-save-commons">
+        <button
+          className="btn-save-commons"
+          style={{ width: "100px", padding: "none" }}
+        >
           <img
             src="images/Commons-logo.png"
             alt="Wikimedia Commons logo"
@@ -33,8 +38,9 @@ const Navbar = () => {
           />
           <div className="text-btn">Save to Wikimedia Commons</div>
         </button>
+
         <a href="https://github.com/JoeClos/listeria-bot">
-          <button className="github-button">
+          <button className="btn-github">
             <FontAwesomeIcon icon={faGithub} />
             <div className="text-btn">GitHub</div>
           </button>
