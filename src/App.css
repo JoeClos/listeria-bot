@@ -69,7 +69,7 @@ body {
   }
 }
 
-/* For tablet phones: */
+/* For tablet: */
 @media all and (max-width: 768px) {
   section {
     width: 90%;
@@ -111,3 +111,6 @@ body {
     font-size: 0.7rem;
   }
 }
+
+
+
