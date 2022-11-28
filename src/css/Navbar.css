@@ -14,7 +14,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2rem;
-  border-bottom: 1px solid darkgray;
+  border: 1px solid #cacaca;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 h1 {
   font-size: 2rem;
