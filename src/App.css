@@ -11,6 +11,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* a spinner while loading the data  */
 .position {
   display: flex;
   flex-direction: column;
