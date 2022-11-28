@@ -3,6 +3,13 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .position {
   display: flex;
@@ -59,5 +66,19 @@ body {
   }
   .wrap-data {
     padding: 10px;
+  }
+}
+
+/* For tablet phones: */
+@media all and (max-width: 768px) {
+  section {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .navbar {
+    flex-wrap: nowrap;
+  }
+  .navbar h1 {
+    font-size: 1.5rem;
   }
 }
