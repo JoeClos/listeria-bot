@@ -3,10 +3,10 @@ name: CI/CD
 on:
   push:
     branches:
-      - main
+      - fixgit
   pull_request:
     branches:
-      - main
+      - fixgit
 
 jobs:
   # The build job
@@ -30,7 +30,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './build'
-          production-branch: main
+          production-branch: fixgit
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: false
