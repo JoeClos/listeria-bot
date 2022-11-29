@@ -2,12 +2,7 @@ export default function convert(input, sparql) {
   const link = "http://www.w3.org/2001/XMLSchema#decimal";
   const link2 ="http://www.w3.org/2001/XMLSchema#integer";
   const link3 = "http://www.w3.org/2001/XMLSchema#boolean";
-  const linkResult = link.split('#')[1];
-  const linkResult2 = link2.split('#')[1];
 
-  console.log("Link 1: " + linkResult)
-  console.log("Link 2: " + linkResult2)
-  // console.log(input, sparql)
   const result = {
     license: "",
     description: {
@@ -42,8 +37,10 @@ export default function convert(input, sparql) {
       result.schema.fields[i].type = "number";
     }else if(input.results.bindings[0][key].datatype === link3){
       result.schema.fields[i].type = "boolean";
-    }
-    else{
+    }else if(input.results.bindings[0][key].datatype === undefined){
+      alert("There is a mix datatype");
+      break;
+    }else{
       result.schema.fields[i].type = "string";
 
     }
