@@ -60,7 +60,7 @@ export default function convert(input, sparql) {
       const key = input.head.vars[j];
       if(key){
         result.data[i][j] = input.results.bindings[i][key].value;
-      }else if(key.valuen === undefined){
+      }else if(key.value === undefined){
         window.prompt("Key is missing");
       }
     }
