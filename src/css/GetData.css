@@ -3,7 +3,6 @@
   /* flex-wrap: wrap; */
   flex-direction: row;
   margin: 1rem;
-  
 }
 
 .data {
@@ -14,8 +13,10 @@
   width: 50%;
 }
 
+.data h2 {
+  color: #54595d;
+}
 .wrap-data {
-  
   word-break: break-all;
   white-space: pre-wrap;
 }

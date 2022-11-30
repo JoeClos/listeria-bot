@@ -11,6 +11,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* a spinner while loading the data  */
 .position {
   display: flex;
   flex-direction: column;
@@ -35,7 +37,7 @@ body {
   }
 }
 
-/* For mobile phones: */
+/* For mobile devices: */
 @media all and (max-width: 426px) {
   .container {
     flex-wrap: wrap;
@@ -53,12 +55,13 @@ body {
   .data {
     width: fit-content;
     margin-left: 2rem;
-    padding: 0;
+    padding:0 5px;
     margin: 5px;
   }
   .data h2 {
     font-size: 1rem;
     text-align: center;
+    
   }
   pre {
     padding: 10px;
@@ -68,12 +71,12 @@ body {
     padding: 10px;
   }
 
-  .github-icon{
-    font-size:20px;
+  .github-icon {
+    font-size: 20px;
   }
 }
 
-/* For tablet: */
+/* For tablets or ipad: */
 @media (min-width: 427px) and (max-width: 768px) {
   section {
     width: 90%;
@@ -93,9 +96,6 @@ body {
     padding: 0.6rem;
   }
 
-  /* .btn-query {
-    padding: 10px 7px;
-  } */
   .btn-save-commons {
     padding: 0;
   }
@@ -115,45 +115,43 @@ body {
     font-size: 0.7rem;
   }
 
-  .github-icon{
-    font-size:20px;
+  .github-icon {
+    font-size: 20px;
   }
 }
 
+/* for laptop , desktop or large-size screen:  */
 @media (min-width: 769px) and (max-width: 1440px) {
-  .buttons-container{
+  .buttons-container {
     align-items: center;
   }
 
-  .btn-query{
+  .btn-query {
     padding: 3px;
-
   }
 
-  .btn-github{
+  .btn-github {
     padding: 8px;
   }
 
-  .github-icon{
-    font-size:20px;
+  .github-icon {
+    font-size: 20px;
   }
 }
-
+/* For Extra-large size device: */
 @media (min-width: 1441px) and (max-width: 1529px) {
-  .buttons-container{
+  .buttons-container {
     align-items: center;
   }
-  .btn-save-commons{
+  .btn-save-commons {
     padding: 8px;
   }
 
-  .btn-github .github-icon{
+  .btn-github .github-icon {
     font-size: 40px;
   }
-  
-  .btn-query{
+
+  .btn-query {
     padding: 15px;
   }
 }
-
-

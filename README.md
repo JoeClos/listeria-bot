@@ -1,2 +1,2 @@
-### See deployed app: https://listeria-bot.netlify.app
+### See deployed app: https://tabular-data-from-sparql.netlify.app/
 
