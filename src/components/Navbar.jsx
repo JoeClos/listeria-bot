@@ -2,11 +2,17 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../css/Navbar.css";
+import axios from "axios";
 
 const Navbar = () => {
   const sparql = document.location.search.slice(1);
   const queryWikidata = "https://query.wikidata.org/";
   const sourceLink = queryWikidata + "#" + sparql;
+
+  const handleClick = ()=> {
+    axios.post('http://localhost:8080/upload');
+  }
+
   return (
     <nav className="navbar">
       <div className="upper-layer">
@@ -28,7 +34,7 @@ const Navbar = () => {
 
           {/*This is the button that's saving the data to Wikimedia Commons  */}
 
-          <button className="btn-save-commons">
+          <button className="btn-save-commons" onClick= {handleClick}>
             <img
               src="images/Commons-logo.png"
               alt="Wikimedia Commons logo"

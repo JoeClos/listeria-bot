@@ -1,13 +1,24 @@
-export default function convert(input, sparql) {
-  const link = "http://www.w3.org/2001/XMLSchema#decimal";
-  const link2 = "http://www.w3.org/2001/XMLSchema#integer";
-  const link3 = "http://www.w3.org/2001/XMLSchema#boolean";
-  const linkResult = link.split("#")[1];
-  const linkResult2 = link2.split("#")[1];
+const link = "http://www.w3.org/2001/XMLSchema#decimal";
+const link2 = "http://www.w3.org/2001/XMLSchema#integer";
+const link3 = "http://www.w3.org/2001/XMLSchema#boolean";
 
-  console.log("Link 1: " + linkResult);
-  console.log("Link 2: " + linkResult2);
-  // console.log(input, sparql)
+function getType(bindingVar){
+  
+  if (bindingVar.type === "uri") {
+    return "uri";
+  } else if (bindingVar.datatype === link) {
+    return "number";
+  } else if (bindingVar.datatype === link2) {
+    return  "number";
+  } else if (bindingVar.datatype === link3) {
+    return "boolean";
+  } else {
+    return "string";
+  }
+}
+
+export default function convert(input, sparql, setMessage) {
+
   const result = {
     license: "",
     description: {
@@ -32,20 +43,6 @@ export default function convert(input, sparql) {
 
     const key = input.head.vars[i];
 
-    function getType(bindingVar){
-  
-      if (input.results.bindings[0][key].type === "uri") {
-        return result.schema.fields[i].type = "uri";
-      } else if (input.results.bindings[0][key].datatype === link) {
-        return result.schema.fields[i].type = "number";
-      } else if (input.results.bindings[0][key].datatype === link2) {
-        return result.schema.fields[i].type = "number";
-      } else if (input.results.bindings[0][key].datatype === link3) {
-        return result.schema.fields[i].type = "boolean";
-      } else {
-        return result.schema.fields[i].type = "string";
-      }
-    }
     result.schema.fields[i].type = getType(input.results.bindings[0][key]);
     
 
@@ -59,6 +56,13 @@ export default function convert(input, sparql) {
 
     for (let j = 0; j < input.head.vars.length; j++) {
       const key = input.head.vars[j];
+
+      if(input.results.bindings[i][key] && getType(input.results.bindings[i][key]) !== result.schema.fields[j].type){
+
+        setMessage("There is mixed data type");
+        result.schema.fields[j].type = "string";
+      }
+
       if(!input.results.bindings[i][key]){
         result.data[i][j] = null;
       }else{

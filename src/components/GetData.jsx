@@ -13,11 +13,15 @@ const GetData = () => {
 
   const [query, setQuery] = useState();
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState();
+  const [ outputData, setOutputData] = useState();
+
   useEffect(
     () => {
       axios
         .get(sourceUrl)
         .then((response) => {
+          setOutputData(convert(response.data, sourceLink, setMessage));
           setQuery(response.data);
           console.log(response.data);
         })
@@ -42,6 +46,7 @@ const GetData = () => {
   return (
     <section>
       <Navbar />
+      <p>{message}</p>
       <div className="container">
         <div className="data">
           <h2>Data from the Wikidata</h2>
@@ -50,7 +55,7 @@ const GetData = () => {
         <div className="data">
           <h2>Data for the Wikimedia Commons</h2>
           <pre className="wrap-data">
-            {query && JSON.stringify(convert(query, sourceLink), null, "   ")}
+            {query && JSON.stringify(outputData, null, "   ")}
           </pre>
         </div>
       </div>
