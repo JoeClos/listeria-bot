@@ -2,14 +2,13 @@ const link = "http://www.w3.org/2001/XMLSchema#decimal";
 const link2 = "http://www.w3.org/2001/XMLSchema#integer";
 const link3 = "http://www.w3.org/2001/XMLSchema#boolean";
 
-function getType(bindingVar){
-  
+function getType(bindingVar) {
   if (bindingVar.type === "uri") {
     return "uri";
   } else if (bindingVar.datatype === link) {
     return "number";
   } else if (bindingVar.datatype === link2) {
-    return  "number";
+    return "number";
   } else if (bindingVar.datatype === link3) {
     return "boolean";
   } else {
@@ -18,11 +17,10 @@ function getType(bindingVar){
 }
 
 export default function convert(input, sparql, setMessage) {
-
   const result = {
     license: "",
     description: {
-      en: ""
+      en: "",
     },
     sources: "",
     schema: {
@@ -44,12 +42,9 @@ export default function convert(input, sparql, setMessage) {
     const key = input.head.vars[i];
 
     result.schema.fields[i].type = getType(input.results.bindings[0][key]);
-    
 
     result.schema.fields[i].title = { en: input.head.vars[i] };
-
   }
-
 
   for (let i = 0; i < input.results.bindings.length; i++) {
     result.data[i] = [];
@@ -57,21 +52,20 @@ export default function convert(input, sparql, setMessage) {
     for (let j = 0; j < input.head.vars.length; j++) {
       const key = input.head.vars[j];
 
-      if(input.results.bindings[i][key] && getType(input.results.bindings[i][key]) !== result.schema.fields[j].type){
-
-        setMessage("There is mixed data type");
+      if (
+        input.results.bindings[i][key] &&
+        getType(input.results.bindings[i][key]) !== result.schema.fields[j].type
+      ) {
+        setMessage("There Is Mixed Data Type In This Query");
         result.schema.fields[j].type = "string";
       }
 
-      if(!input.results.bindings[i][key]){
+      if (!input.results.bindings[i][key]) {
         result.data[i][j] = null;
-      }else{
+      } else {
         result.data[i][j] = input.results.bindings[i][key].value;
-
       }
-      
     }
-
   }
 
   return result;

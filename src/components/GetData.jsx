@@ -14,7 +14,7 @@ const GetData = () => {
   const [query, setQuery] = useState();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState();
-  const [ outputData, setOutputData] = useState();
+  const [outputData, setOutputData] = useState();
 
   useEffect(
     () => {
