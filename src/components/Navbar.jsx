@@ -9,9 +9,10 @@ const Navbar = () => {
   const queryWikidata = "https://query.wikidata.org/";
   const sourceLink = queryWikidata + "#" + sparql;
 
-  const handleClick = ()=> {
-    axios.post('http://localhost:8080/upload');
-  }
+  const handleClick = () => {
+    axios.post("http://localhost:8080/upload");
+    alert("Page uploaded! 🎊 🎉");
+  };
 
   return (
     <nav className="navbar">
@@ -34,7 +35,7 @@ const Navbar = () => {
 
           {/*This is the button that's saving the data to Wikimedia Commons  */}
 
-          <button className="btn-save-commons" onClick= {handleClick}>
+          <button className="btn-save-commons" onClick={handleClick}>
             <img
               src="images/Commons-logo.png"
               alt="Wikimedia Commons logo"
