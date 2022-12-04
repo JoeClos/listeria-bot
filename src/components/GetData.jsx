@@ -46,9 +46,11 @@ const GetData = () => {
   return (
     <section>
       <Navbar />
-      <div className="show-message">
-        <p>{message}</p>
-      </div>
+      {message && (
+        <div className="show-message">
+          <p>{message}</p>
+        </div>
+      )}
 
       <div className="container">
         <div className="data">

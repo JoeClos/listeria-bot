@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleClick = () => {
     axios.post("http://localhost:8080/upload");
-    alert("Page uploaded! 🎊 🎉");
+    alert("PAGE UPLOADED! 🎊 🎉");
   };
 
   return (
