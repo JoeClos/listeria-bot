@@ -15,6 +15,12 @@ const GetData = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState();
   const [outputData, setOutputData] = useState();
+  const [toggle, setToggle] = useState(true);
+
+  const handleChange = () => {
+    return setToggle(!toggle);
+  };
+  
 
   useEffect(
     () => {
@@ -50,7 +56,19 @@ const GetData = () => {
       <div className="container">
         <div className="data">
           <h2>Data from the Wikidata</h2>
-          <pre className="wrap-data">{JSON.stringify(query, null, "   ")}</pre>
+          <button
+            onClick={() => handleChange()}
+            className="btn btn-primary mb-5"
+            style={{border: "1px #3272b6 solid", borderRadius: "5px", color: "#0069d9", cursor: "pointer", padding: "5px"}}
+            id="btn-hidden"
+          >
+           { toggle? "See less" : "See more"}
+          </button>
+          {toggle && (
+            <pre className="wrap-data">
+              {JSON.stringify(query, null, "   ")}
+            </pre>
+          )}
         </div>
         <div className="data">
           <h2>Data for the Wikimedia Commons</h2>
