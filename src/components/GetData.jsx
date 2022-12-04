@@ -46,7 +46,10 @@ const GetData = () => {
   return (
     <section>
       <Navbar />
-      <p>{message}</p>
+      <div className="show-message">
+        <p>{message}</p>
+      </div>
+
       <div className="container">
         <div className="data">
           <h2>Data from the Wikidata</h2>

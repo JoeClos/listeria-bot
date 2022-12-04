@@ -20,3 +20,34 @@
   word-break: break-all;
   white-space: pre-wrap;
 }
+
+.show-message {
+  height: 40px;
+  margin-top: 15px;
+  margin-left: 30rem;
+  margin-right: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --angle: 0deg;
+  border: 10px solid;
+  border-image: linear-gradient(var(--angle), #026699, #339966, #990700) 1;
+  animation: 2s rotate linear infinite;
+  overflow: hidden;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+p {
+  font-weight: 500;
+}
