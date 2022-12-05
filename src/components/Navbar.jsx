@@ -4,13 +4,16 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../css/Navbar.css";
 import axios from "axios";
 
-const Navbar = () => {
+const Navbar = ({ outputData }) => {
   const sparql = document.location.search.slice(1);
   const queryWikidata = "https://query.wikidata.org/";
   const sourceLink = queryWikidata + "#" + sparql;
 
   const handleClick = () => {
-    axios.post("http://localhost:8080/upload");
+    axios.post("http://localhost:8080/upload", {
+      pageName: "Data:Sandbox/JosephineBot/uploadTest.tab",
+      content: outputData
+    });
     alert("PAGE UPLOADED! 🎊 🎉");
   };
 

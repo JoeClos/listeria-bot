@@ -4,7 +4,7 @@ const link3 = "http://www.w3.org/2001/XMLSchema#boolean";
 
 function getType(bindingVar) {
   if (bindingVar.type === "uri") {
-    return "uri";
+    return "string";
   } else if (bindingVar.datatype === link) {
     return "number";
   } else if (bindingVar.datatype === link2) {

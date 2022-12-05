@@ -57,7 +57,8 @@ const GetData = () => {
 
   return (
     <section>
-      <Navbar />
+      <Navbar outputData={outputData} />
+
       {message && (
         <div className="show-message">
           <p>{message}</p>
@@ -95,9 +96,9 @@ const GetData = () => {
             </span>
           </h2>
           {toggleArrow2 && (
-          <pre className="wrap-data">
-            {query && JSON.stringify(outputData, null, "   ")}
-          </pre>
+            <pre className="wrap-data">
+              {query && JSON.stringify(outputData, null, "   ")}
+            </pre>
           )}
         </div>
       </div>
