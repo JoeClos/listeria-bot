@@ -23,9 +23,11 @@
 
 .show-message {
   height: 40px;
-  margin-top: 15px;
-  margin-left: 30rem;
-  margin-right: 30rem;
+  /* margin-top: 15px; */
+  /* margin-left: 20rem;
+  margin-right: 20rem; */
+  margin: auto;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,4 +52,37 @@
 
 p {
   font-weight: 500;
+}
+
+#btn-hidden{
+  margin-left: 15px;
+}
+
+@media all and (max-width: 426px) {
+  p {
+    font-size: 13px;
+    padding: 0;
+  }
+
+  .title-and-btn-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5px;
+  }
+  .show-message {
+    width: 80%;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .show-message {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .show-message {
+    width: 40%;
+  }
 }

@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import convert from "../convert";
 import Navbar from "./Navbar";
 import "../css/GetData.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortDown } from "@fortawesome/free-solid-svg-icons";
+import { faSortUp } from "@fortawesome/free-solid-svg-icons";
 
 const GetData = () => {
   const url = "https://query.wikidata.org/sparql?format=json&query=";
@@ -15,6 +18,15 @@ const GetData = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState();
   const [outputData, setOutputData] = useState();
+  const [toggleArrowDown, setToggleArrowDown] = useState(true);
+  const [toggleArrowUp, setToggleArrowUp] = useState(true);
+
+  const handleChangeArrowDown = () => {
+    return setToggleArrowDown(!toggleArrowDown);
+  };
+  const handleChangeArrowUp = () => {
+    return setToggleArrowUp(!toggleArrowUp);
+  };
 
   useEffect(
     () => {
@@ -54,14 +66,39 @@ const GetData = () => {
 
       <div className="container">
         <div className="data">
-          <h2>Data from the Wikidata</h2>
-          <pre className="wrap-data">{JSON.stringify(query, null, "   ")}</pre>
+          <h2>
+            Data from the Wikidata{" "}
+            <span onClick={() => handleChangeArrowDown()} id="btn-hidden">
+              {toggleArrowDown ? (
+                <FontAwesomeIcon icon={faSortUp} />
+              ) : (
+                <FontAwesomeIcon icon={faSortDown} />
+              )}
+            </span>
+          </h2>
+
+          {toggleArrowDown && (
+            <pre className="wrap-data">
+              {JSON.stringify(query, null, "   ")}
+            </pre>
+          )}
         </div>
         <div className="data">
-          <h2>Data for the Wikimedia Commons</h2>
+          <h2>
+            Data for the Wikimedia Commons{" "}
+            <span onClick={() => handleChangeArrowUp()} id="btn-hidden">
+              {toggleArrowUp ? (
+                <FontAwesomeIcon icon={faSortUp} />
+              ) : (
+                <FontAwesomeIcon icon={faSortDown} />
+              )}
+            </span>
+          </h2>
+          {toggleArrowUp && (
           <pre className="wrap-data">
             {query && JSON.stringify(outputData, null, "   ")}
           </pre>
+          )}
         </div>
       </div>
     </section>

@@ -55,13 +55,12 @@ body {
   .data {
     width: fit-content;
     margin-left: 2rem;
-    padding:0 5px;
+    padding: 0 5px;
     margin: 5px;
   }
   .data h2 {
     font-size: 1rem;
     text-align: center;
-    
   }
   pre {
     padding: 10px;
@@ -91,7 +90,10 @@ body {
   .container {
     width: 100%;
   }
-
+  #btn-hidden {
+    display: none;
+  }
+  
   .buttons-container {
     padding: 0.6rem;
   }
@@ -126,6 +128,10 @@ body {
     align-items: center;
   }
 
+  #btn-hidden {
+    display: none;
+  }
+  
   .btn-query {
     padding: 3px;
   }
@@ -147,11 +153,21 @@ body {
     padding: 8px;
   }
 
+  #btn-hidden {
+    display: none;
+  }
+  
   .btn-github .github-icon {
     font-size: 40px;
   }
 
   .btn-query {
     padding: 15px;
+  }
+}
+
+@media (min-width: 1530px) {
+  #btn-hidden {
+    display: none;
   }
 }
