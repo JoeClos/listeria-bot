@@ -10,7 +10,7 @@ const Navbar = ({ outputData }) => {
   const sourceLink = queryWikidata + "#" + sparql;
 
   const handleClick = () => {
-    axios.post("http://localhost:8080/upload", {
+    axios.post(process.env.REACT_APP_BACKEND_URL ||  "https://tabular-data-from-sparql.toolforge.org/upload", {
       pageName: "Data:Sandbox/JosephineBot/uploadTest.tab",
       content: outputData
     });

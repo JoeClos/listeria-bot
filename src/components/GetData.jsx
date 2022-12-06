@@ -4,8 +4,7 @@ import convert from "../convert";
 import Navbar from "./Navbar";
 import "../css/GetData.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSortDown } from "@fortawesome/free-solid-svg-icons";
-import { faSortUp } from "@fortawesome/free-solid-svg-icons";
+import { faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons";
 
 const GetData = () => {
   const url = "https://query.wikidata.org/sparql?format=json&query=";
