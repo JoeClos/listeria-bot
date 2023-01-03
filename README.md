@@ -1,3 +1,5 @@
+# Tabular Data from SPARQL is a tool that executes a SPARQL query from Wikidata and save the result on the Wikimedia Commons, in tabular data format. The user can preview the query in query.wikidata.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
